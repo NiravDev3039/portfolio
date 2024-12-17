@@ -1,0 +1,80 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.title {
+    font-size: 2em;
+    padding: 10px 20px;
+    /* position: relative;
+    bottom: 70px; */
+    border-radius: 10px;
+    background: white;
+    color: black;
+    border: 6px solid #24f524;
+    filter: drop-shadow(2px 4px 6px black);
+}
+
+.toolGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 800px;
+    width: 100%;
+    border: 2px solid rgb(24, 227, 72);
+    padding: 30px;
+    border-radius: 10px;
+    position: relative;
+    top: 20px;
+    background: white;
+    color: black;
+}
+
+.tool {
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 2px solid #ffffff;
+}
+
+.tool:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff;
+    filter: brightness(0.5);
+    border: 1px solid rgb(24, 227, 72);
+}
+
+.tool i,
+.tool svg {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.tool span {
+    font-size: 1.2em;
+}
+
+@media (max-width: 1024px) {
+    .toolGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .toolGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .toolGrid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,73 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: white;
+  color: black;
+  position: sticky !important; /* Make navbar sticky */
+  top: 0; /* Stick the navbar at the top */
+ /* Ensure the navbar is above other elements */
+z-index: 1;
+  
+}
+
+.logo {
+  font-size: 1.5rem;
+}
+
+.hamburger {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.fullscreenMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 999; /* Make sure it's below the navbar */
+  transform: scale(0);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.fullscreenMenuOpen {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.closeIcon {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+.fullscreenMenu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.fullscreenMenu li {
+  margin: 1rem 0;
+}
+
+.fullscreenMenu a {
+  color: #fff;
+  font-size: 2rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.fullscreenMenu a:hover {
+  color: #ddd;
+}

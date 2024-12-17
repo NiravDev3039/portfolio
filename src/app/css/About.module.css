@@ -1,0 +1,123 @@
+/* Container styles */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    margin: 10px;
+    height: 50vh;
+    border: 5px solid rgb(30, 203, 71);
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    color: black;
+}
+
+/* Typing animation styles */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: black; }
+}
+
+.title {
+    text-align: right;
+    font-size: 5vw;
+    padding: 0 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 0.15em solid black;
+    animation: typing 4s steps(10, end), blink-caret 0.75s step-end infinite;
+}
+
+/* Overlay styles */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9;
+}
+
+/* Popup styles */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.3s ease;
+    width: 90vw;
+    max-width: 800px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    overflow: auto;
+    background: white;
+    border-radius: 10px;
+}
+
+.popup.visible {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.close-button {
+    align-self: flex-end;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.popupContent {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.popupContent h2 {
+    font-size: 24px;
+    color: #37b3a5;
+    margin-bottom: 15px;
+}
+
+.popupContent p {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .title {
+        font-size: 8vw;
+    }
+    .popup {
+        padding: 15px;
+    }
+    .close-button {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 10vw;
+    }
+    .popup {
+        padding: 10px;
+        width: 90vw;
+    }
+    .close-button {
+        font-size: 16px;
+    }
+}

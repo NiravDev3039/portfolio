@@ -1,0 +1,135 @@
+/* allwork.module.css */
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center; /* Center the tabs horizontally */
+  cursor: pointer;
+  color: black;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px; /* Space between tabs and content */
+}
+
+.tab {
+  text-align: center;
+  padding: 6px 12px; /* Reduced padding for smaller tabs */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #eee;
+  margin-right: 5px; /* Space between tabs */
+  font-size: 12px; /* Reduced font size */
+}
+
+.tab:last-child {
+  margin-right: 0; /* Remove margin on the last tab */
+}
+
+.tab.active {
+  background-color: #fff;
+  border-bottom: 1px solid transparent;
+  font-weight: bold;
+}
+
+.tabContent {
+  padding: 20px;
+  /* border: 1px solid #ddd; */
+  border-radius: 5px;
+  background-color: black;
+}
+
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px; /* Reduced gap between cards */
+  margin-bottom: 30px; /* Space between card sets */
+}
+/* allwork.module.css */
+.card {
+  position: relative;
+  flex: 1 1 calc(25% - 15px); /* Adjust the width for smaller cards */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #fff;
+  padding: 8px; /* Reduced padding */
+  box-sizing: border-box;
+  border: 2px solid #24f524;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05); /* Slightly scale up the card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+.cardImage {
+  width: 100%;
+  height: 250px; /* Fixed height for images to standardize card size */
+  object-fit: cover;
+}
+
+.cardContent {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 8px; /* Reduced padding */
+  color: black;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  transform: translateY(100%); /* Start hidden below the card */
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.card:hover .cardContent {
+  transform: translateY(0); /* Move content into view */
+  opacity: 1;
+}
+
+.cardContent p {
+  color: black;
+}
+
+.cardButtons {
+  margin-top: 8px; /* Reduced margin-top */
+}
+
+.cardButton {
+  display: inline-block;
+  padding: 6px 12px; /* Reduced padding */
+  margin-right: 8px; /* Reduced margin-right */
+  border: 1px solid greenyellow;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+}
+
+.cardButton:hover {
+  background-color: #ddd;
+}
+
+@media (max-width: 600px) {
+  .tabs {
+    flex-direction: column;
+  }
+
+  .tab {
+    border-radius: 0;
+    margin-right: 0; /* No margin on vertical tab layout */
+    margin-bottom: 5px; /* Space between vertically stacked tabs */
+  }
+
+  .tab:last-child {
+    margin-bottom: 0; /* Remove margin on the last tab */
+  }
+
+  .card {
+    flex: 1 1 100%; /* Full width on mobile */
+  }
+}

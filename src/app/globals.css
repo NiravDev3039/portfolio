@@ -1,0 +1,127 @@
+:root {
+  --clr-one: white; /* White color */
+  --clr-two: white; /* White color */
+  --clr-three: white; /* White color */
+  --clr-bg: #191919;
+}
+/* For Webkit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #24f524; /* Background of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #24f524; /* Scrollbar color */
+  border-radius: 10px; /* Rounded corners for the scrollbar */
+  border: 2px solid #f1f1f1; /* Space around the scrollbar */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #24f524; /* Scrollbar color on hover */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin; /* Thin scrollbar */
+  scrollbar-color: #24f524 #f1f1f1; /* Scrollbar color and track color */
+}
+
+@font-face {
+  font-family: 'regularfonts';
+  src: url('../app/fonts/Ubuntu-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'sendmailfonts';
+  src: url('../app/Crackman.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'footerfonts';
+  src: url('../app/Semplicita\ Ombra.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'titlefonts';
+  src: url('../app/fonts/Swera\ Regular\ Demo.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  background-color: black;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+@keyframes borderPulse {
+  0%, 100% {
+    border-color: #fff;
+    box-shadow: 
+      0 0 5px #fff, 
+      0 0 10px #fff, 
+      0 0 15px #fff, 
+     
+  }
+  50% {
+    border-color: #fff;
+    box-shadow: 
+      0 0 2px #fff, 
+      0 0 4px #fff, 
+      0 0 6px #fff, 
+    
+  }
+}
+/* 
+h1 {
+  font-weight: bold;
+  color: var(--clr-one);
+  font-size: 30px;
+  border: 5px solid white;
+  padding: 10px;
+  border-radius: 5px;
+  filter: drop-shadow(2px 4px 6px black);
+  animation: borderPulse 1.5s infinite alternate;
+} */
+
+
+
+p {
+  margin-top: 1em;
+  color: var(--clr-one); /* White color */
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff,
+    0 0 80px #fff, 0 0 90px #fff, 0 0 100px #fff, 0 0 150px #fff;
+}
+
+ul.buttons {
+  list-style-type: none; /* Removes the default bullets */
+  padding: 0; /* Removes the default padding */
+}
+
+ul.buttons li {
+  display: inline-block; /* Makes the list items align horizontally */
+  margin-right: 10px; /* Adds some space between buttons */
+}
+
+ul.buttons li a {
+  color: var(--clr-one); /* White color */
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff,
+    0 0 80px #fff, 0 0 90px #fff, 0 0 100px #fff, 0 0 150px #fff;
+  text-decoration: none;
+}

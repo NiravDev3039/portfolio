@@ -1,0 +1,43 @@
+.quote {
+  font-size: 20px; /* Default font-size for mobile */
+  min-height: 300px; /* Minimum height to allow for content adjustment */
+  border: 7px solid #24f524;
+  padding: 10px 20px;
+  margin: 1rem; /* Adjusted for better spacing on small screens */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  color: black;
+  border-radius: 10px;
+  filter: drop-shadow(2px 4px 6px black);
+  font-family: 'titlefonts';
+  position: relative;
+    top: 308px;
+}
+
+/* Tablet view */
+@media (min-width: 768px) {
+  .quote {
+    font-size: 24px;
+    min-height: auto; /* Allow height to adjust based on content */
+    margin: 2rem; /* Increased margin for better spacing on tablets */
+  }
+}
+
+/* Desktop view */
+@media (min-width: 1024px) {
+  .quote {
+    font-size: 30px;
+    min-height: auto; /* Allow height to adjust based on content */
+    margin: 3rem; /* Adjust margin for desktops */
+  }
+}
+
+/* Larger desktops */
+@media (min-width: 1440px) {
+  .quote {
+    font-size: 36px;
+    margin: 4rem; /* Adjust margin for larger desktops */
+  }
+}

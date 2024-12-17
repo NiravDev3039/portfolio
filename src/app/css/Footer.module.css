@@ -1,0 +1,28 @@
+.footer-container {
+  background-color: rgb(3, 2, 2);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'xt, sans-serif';
+  position: relative;
+    top: 500px;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    padding: 10px;
+    font-size: 16px; /* Adjust font size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-container {
+    padding: 5px;
+    font-size: 14px; /* Further adjust font size for very small screens */
+    height: auto; /* Allow height to adjust for small screens */
+  }
+}

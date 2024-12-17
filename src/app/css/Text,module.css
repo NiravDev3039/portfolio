@@ -1,0 +1,15 @@
+
+.iam {
+    color: black !important;
+    font-size: 55px;
+    padding: 15px;
+    font-family: sans-serif;
+  }
+  
+  .text {
+    color: black !important;
+    border-right: 2px solid red;
+    font-size: 55px;
+    font-family: sans-serif;
+    color: rgb(255, 30, 0);
+  }

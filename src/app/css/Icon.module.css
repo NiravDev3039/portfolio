@@ -1,0 +1,19 @@
+/* Icon.module.css */
+
+.container {
+    display: flex;
+    justify-content: space-around; /* Adjust spacing between icons */
+    align-items: center;
+    flex-wrap: wrap; /* Allow icons to wrap to the next line on smaller screens */
+    background-color:white;
+    height: 150px;
+    position: relative;
+    top: 500px;
+  }
+  
+  .icon {
+    width: 50px; /* Adjust width as needed */
+    height: 50px; /* Adjust height as needed */
+    margin: 10px; /* Adjust margins between icons */
+  }
+  
